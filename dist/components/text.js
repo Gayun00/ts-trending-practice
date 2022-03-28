@@ -9,7 +9,7 @@ export class TextComponent {
         const textElement = this.element.querySelector('.textContent');
         textElement.textContent = text;
     }
-    attachTo(parent, position = 'afterbegin') {
+    attachTo(parent, position = 'beforeend') {
         parent.insertAdjacentElement(position, this.element);
     }
 }

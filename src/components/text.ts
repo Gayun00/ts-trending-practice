@@ -12,7 +12,7 @@ export class TextComponent {
 		)! as HTMLParagraphElement;
 		textElement.textContent = text;
 	}
-	attachTo(parent: HTMLElement, position: InsertPosition = 'afterbegin') {
+	attachTo(parent: HTMLElement, position: InsertPosition = 'beforeend') {
 		parent.insertAdjacentElement(position, this.element);
 	}
 }
