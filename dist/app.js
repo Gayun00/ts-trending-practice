@@ -1,4 +1,4 @@
-import { LinkComponent } from './components/Link.js';
+import { LinkComponent } from './components/link.js';
 import { TextComponent } from './components/text.js';
 import { PageComponent } from './components/page.js';
 class App {

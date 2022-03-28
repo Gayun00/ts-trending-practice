@@ -1,9 +1,6 @@
-export class PageComponent {
+import { BaseComponent } from './base.js';
+export class PageComponent extends BaseComponent {
     constructor() {
-        this.element = document.createElement('ul');
-        this.element.setAttribute('class', 'page');
-    }
-    attachTo(parent, position = 'afterbegin') {
-        parent.insertAdjacentElement(position, this.element);
+        super(`<ul></ul>`);
     }
 }

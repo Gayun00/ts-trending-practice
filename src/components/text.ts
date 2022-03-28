@@ -1,18 +1,9 @@
-export class TextComponent {
-	private element: HTMLElement;
+import { BaseComponent } from './base.js';
+export class TextComponent extends BaseComponent<HTMLElement> {
 	constructor(text: string) {
-		const template = document.createElement('template');
-		template.innerHTML = `
+		super(`
       <section>
-        <p class="textContent"></p>
-      </section>`;
-		this.element = template.content.firstElementChild! as HTMLElement;
-		const textElement = this.element.querySelector(
-			'.textContent'
-		)! as HTMLParagraphElement;
-		textElement.textContent = text;
-	}
-	attachTo(parent: HTMLElement, position: InsertPosition = 'beforeend') {
-		parent.insertAdjacentElement(position, this.element);
+        <p class="textContent">${text}</p>
+      </section>`);
 	}
 }
