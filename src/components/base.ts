@@ -9,7 +9,15 @@ export class BaseComponent<T extends HTMLElement> implements Component {
 		template.innerHTML = htmlString;
 		this.element = template.content.firstElementChild! as T;
 	}
+
 	attachTo(parent: HTMLElement, position: InsertPosition = 'beforeend') {
 		parent.insertAdjacentElement(position, this.element);
+	}
+
+	removeFrom(parent: HTMLElement) {
+		if (parent !== this.element.parentElement) {
+			throw new Error('remove from parent element error');
+		}
+		parent.removeChild(this.element);
 	}
 }

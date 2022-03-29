@@ -1,7 +1,7 @@
+import { ModalComponent } from './components/modal.js';
 import { LinkComponent } from './components/link.js';
 import { TextComponent } from './components/text.js';
 import { PageComponent } from './components/page.js';
-import { AddButtonComponent } from './components/addButton.js';
 class App {
 	private readonly page: PageComponent;
 	constructor(appRoot: HTMLElement) {
@@ -18,8 +18,26 @@ class App {
 			'url'
 		);
 		Link.attachTo(appRoot);
-		const addButton = new AddButtonComponent();
-		addButton.attachTo(appRoot);
+		const modal = new ModalComponent();
+
+		function handleModal() {
+			console.log(modal);
+
+			modal.setOnCloseListener(() => {
+				modal.removeFrom(document.body);
+			});
+			modal.setOnSubmitListener(() => {
+				modal.removeFrom(document.body);
+			});
+			modal.attachTo(document.body);
+		}
+
+		const addButton = document.querySelector('.addButton');
+		console.log(addButton);
+		addButton?.addEventListener('click', handleModal);
+
+		// const addButton = new AddButtonComponent(handleModal);
+		// addButton.attachTo(appRoot);
 	}
 }
 
