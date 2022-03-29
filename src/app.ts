@@ -1,6 +1,7 @@
 import { LinkComponent } from './components/link.js';
 import { TextComponent } from './components/text.js';
 import { PageComponent } from './components/page.js';
+import { AddButtonComponent } from './components/addButton.js';
 class App {
 	private readonly page: PageComponent;
 	constructor(appRoot: HTMLElement) {
@@ -17,6 +18,8 @@ class App {
 			'url'
 		);
 		Link.attachTo(appRoot);
+		const addButton = new AddButtonComponent();
+		addButton.attachTo(appRoot);
 	}
 }
 
