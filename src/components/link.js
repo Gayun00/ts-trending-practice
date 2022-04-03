@@ -9,6 +9,10 @@ class LinkComponent extends base_js_1.BaseComponent {
       <h2>${title}</h2>
       <p>${text}</p>
       <a href=${link}>${link}</a>
+      <svg width="400" height="200">
+        <rect width="400" height="300" fill="black" stroke-width: 3px stroke: rgb(0,0,0)/>
+      </svg>
+
     </section>`);
     }
 }

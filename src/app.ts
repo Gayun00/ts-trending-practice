@@ -2,6 +2,7 @@ import { ModalComponent } from './components/modal.js';
 import { LinkComponent } from './components/link.js';
 import { TextComponent } from './components/text.js';
 import { PageComponent } from './components/page.js';
+import { writeUserData } from 'firebase.ts/database.js';
 class App {
 	private readonly page: PageComponent;
 	constructor(appRoot: HTMLElement) {
@@ -34,7 +35,9 @@ class App {
 
 		const addButton = document.querySelector('.addButton');
 		console.log(addButton);
-		addButton?.addEventListener('click', handleModal);
+		addButton?.addEventListener('click', () => {
+			writeUserData('sdfsdfsdf', 'sdfsdfsdf');
+		});
 
 		// const addButton = new AddButtonComponent(handleModal);
 		// addButton.attachTo(appRoot);
