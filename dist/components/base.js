@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BaseComponent = void 0;
-class BaseComponent {
+export class BaseComponent {
     constructor(htmlString) {
         const template = document.createElement('template');
         template.innerHTML = htmlString;
@@ -17,4 +14,3 @@ class BaseComponent {
         parent.removeChild(this.element);
     }
 }
-exports.BaseComponent = BaseComponent;

@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PageComponent = void 0;
-const base_js_1 = require("./base.js");
-class PageComponent extends base_js_1.BaseComponent {
+import { BaseComponent } from './base.js';
+export class PageComponent extends BaseComponent {
     constructor() {
         super(`<ul>
       <button class="addButton">추가버튼</button>
@@ -10,4 +7,3 @@ class PageComponent extends base_js_1.BaseComponent {
     `);
     }
 }
-exports.PageComponent = PageComponent;

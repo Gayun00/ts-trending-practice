@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LinkComponent = void 0;
-const base_js_1 = require("./base.js");
-class LinkComponent extends base_js_1.BaseComponent {
+import { BaseComponent } from './base.js';
+export class LinkComponent extends BaseComponent {
     constructor(title, text, link) {
         super(`
     <section>
@@ -12,4 +9,3 @@ class LinkComponent extends base_js_1.BaseComponent {
     </section>`);
     }
 }
-exports.LinkComponent = LinkComponent;

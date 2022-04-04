@@ -2,7 +2,7 @@ import { ModalComponent } from './components/modal.js';
 import { LinkComponent } from './components/link.js';
 import { TextComponent } from './components/text.js';
 import { PageComponent } from './components/page.js';
-import { writeUserData } from 'firebase.ts/database.js';
+import { writeUserData } from './firebase.ts/database';
 class App {
 	private readonly page: PageComponent;
 	constructor(appRoot: HTMLElement) {

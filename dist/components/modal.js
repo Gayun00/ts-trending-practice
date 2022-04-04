@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModalComponent = void 0;
-const base_js_1 = require("./base.js");
-class ModalComponent extends base_js_1.BaseComponent {
+import { BaseComponent } from './base.js';
+export class ModalComponent extends BaseComponent {
     constructor() {
         super(`<div class="modal">modal
     <button class="close">x</button>
@@ -28,4 +25,3 @@ class ModalComponent extends base_js_1.BaseComponent {
         child.attachTo(body);
     }
 }
-exports.ModalComponent = ModalComponent;

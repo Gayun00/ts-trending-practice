@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddButtonComponent = void 0;
-const base_js_1 = require("./base.js");
-class AddButtonComponent extends base_js_1.BaseComponent {
+import { BaseComponent } from './base.js';
+export class AddButtonComponent extends BaseComponent {
     constructor(clickEvent) {
         super(`<button class="addButton">추가</button>`);
         const addButton = document.querySelector('.addButton');
@@ -13,4 +10,3 @@ class AddButtonComponent extends base_js_1.BaseComponent {
         });
     }
 }
-exports.AddButtonComponent = AddButtonComponent;

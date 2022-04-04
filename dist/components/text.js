@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TextComponent = void 0;
-const base_js_1 = require("./base.js");
-class TextComponent extends base_js_1.BaseComponent {
+import { BaseComponent } from './base.js';
+export class TextComponent extends BaseComponent {
     constructor(text) {
         super(`
       <section>
@@ -10,4 +7,3 @@ class TextComponent extends base_js_1.BaseComponent {
       </section>`);
     }
 }
-exports.TextComponent = TextComponent;

@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const app_1 = require("firebase/app");
+import { initializeApp } from 'firebase/app';
 const firebaseConfig = {
     apiKey: 'AIzaSyBELTZir7OhQ-_H1-ec4VUGMZ0tIxdYGTY',
     authDomain: 'trending-post-22672.firebaseapp.com',
@@ -10,5 +8,5 @@ const firebaseConfig = {
     messagingSenderId: '988820037524',
     appId: '1:988820037524:web:e784044a14bbc96062f981',
 };
-const firebaseApp = (0, app_1.initializeApp)(firebaseConfig);
-exports.default = firebaseApp;
+const firebaseApp = initializeApp(firebaseConfig);
+export default firebaseApp;
